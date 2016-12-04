@@ -8,10 +8,8 @@ public class Enemy : MonoBehaviour {
 	public Transform player;
 
     void Start() {
-        player = (GameObject.Find("player")).transform;
+        player = (GameObject.Find("Player")).transform;
     }
-
- 
 
 	void FixedUpdate ()
 	{
@@ -27,7 +25,5 @@ public class Enemy : MonoBehaviour {
 	//		SceneManager.LoadScene ("Testisgut");
 	//	}
 	//}
-
-
 }
 	

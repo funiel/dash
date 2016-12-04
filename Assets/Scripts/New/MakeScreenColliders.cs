@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class makescreencolliders : MonoBehaviour {
+public class MakeScreenColliders : MonoBehaviour {
 
 	[Tooltip("What camera to poll viewport information from. Uses Camera.main when this is not specified.")]
 	public Camera cam;

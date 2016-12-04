@@ -29,10 +29,7 @@ public class Spawn : MonoBehaviour {
     }
 
     public void Update()
-    {
-        // timer to spawn the next goodie Object
-
-        
+    {  
         theCountdown -= Time.deltaTime;
         if (theCountdown <= 0)
         {

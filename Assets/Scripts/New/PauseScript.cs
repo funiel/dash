@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class pause : MonoBehaviour {
+public class PauseScript : MonoBehaviour {
     public Transform canvas;
 
     // Update is called once per frame
