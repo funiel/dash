@@ -1,13 +1,13 @@
 # =============== #
 # Unity generated #
 # =============== #
-[Tt]emp/
-[Oo]bj/
+/[Tt]emp/
+/[Oo]bj/
 [Bb]uild
 /[Ll]ibrary/
 sysinfo.txt
 *.stackdump
- 
+
 # ============================================= #
 # Visual Studio / MonoDevelop / Rider generated #
 # ============================================= #
@@ -22,7 +22,7 @@ sysinfo.txt
 /*.unityproj
 /*.booproj
 /.idea*/
- 
+
 # ============ #
 # OS generated #
 # ============ #
