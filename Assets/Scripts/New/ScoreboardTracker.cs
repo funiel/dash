@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
@@ -9,17 +10,33 @@ public class ScoreboardTracker: MonoBehaviour
 {
 
     private int count;
+    private int lives;
     public Text countText;
+    public Text livesText;
 
-    void Start()
+    private void Start()
     {
         count = 0;
+        lives = 3;
         SetCountText();
+        SetLivesText();
     }
 
-    void SetCountText()
+    private void SetCountText()
     {
         countText.text = "Score: " + count.ToString();
+    }
+
+    private void SetLivesText()
+    {
+        livesText.text = "Lives: " + lives.ToString();
+    }
+
+    private void Update() {
+        if (lives == 0)
+        {
+            SceneManager.LoadScene("Testisgut1");
+        };
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,8 +48,8 @@ public class ScoreboardTracker: MonoBehaviour
                 count = count + 1;
                 SetCountText();
             } else {
-                count = count - 1;
-                SetCountText();
+                lives = lives - 1;
+                SetLivesText();
             }
         }
     }
