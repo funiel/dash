@@ -8,6 +8,15 @@ namespace UnityStandardAssets.ImageEffects
     [AddComponentMenu ("Image Effects/Camera/Vignette and Chromatic Aberration")]
     public class VignetteAndChromaticAberration : PostEffectsBase
     {
+
+        Animator anim;
+
+        new void Start()
+        {
+            anim = GetComponent<Animator>();
+            anim.SetFloat("LostLife", intensity);
+        }
+
         public enum AberrationMode
         {
             Simple = 0,
@@ -26,6 +35,8 @@ namespace UnityStandardAssets.ImageEffects
         public Shader vignetteShader;
         public Shader separableBlurShader;
         public Shader chromAberrationShader;
+
+        
         
         
         private Material m_VignetteMaterial;
